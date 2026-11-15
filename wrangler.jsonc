@@ -1,0 +1,15 @@
+{
+  "name": "security-toolkit",
+  "compatibility_date": "2026-11-01",
+  // Static pages served on blurxy.net paths through Worker routes (routes beat the hub's custom domain).
+  // Same origin as before, so visitors' saved browser data keeps working. Split from blurxy-worldcup26 on 2026-11-15.
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": { "directory": "./public", "not_found_handling": "none" },
+  "routes": [
+    { "pattern": "blurxy.net/osint", "zone_name": "blurxy.net" },
+    { "pattern": "blurxy.net/osint/*", "zone_name": "blurxy.net" },
+    { "pattern": "blurxy.net/kev", "zone_name": "blurxy.net" },
+    { "pattern": "blurxy.net/kev/*", "zone_name": "blurxy.net" }
+  ]
+}
