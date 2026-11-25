@@ -6,23 +6,19 @@
 <meta name="description" content="OSINT Field Kit by blurxy: 2,141 OSINT tools from OSINT Framework and OSINT4ALL, merged, link-checked and sorted by what you start from, with a case notebook that exports a recon report.">
 <meta name="author" content="blurxy (Rafiul Bari)">
 <link rel="canonical" href="https://blurxy.net/osint/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpolygon points='0,0 16,0 16,16' fill='%23f2b705'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
 <meta property="og:title" content="OSINT Field Kit · blurxy">
 <meta property="og:description" content="2,141 OSINT tools, merged from two directories, link-checked and sorted by what you start from. Passive-first, with a case notebook that exports a recon report.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://blurxy.net/osint/">
 <title>OSINT Field Kit · blurxy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/blurxy-v1.css">
 <style>
 /* Layout: a field kit. Left, the directory you filter by what you already hold; right, the case notebook that becomes the recon report. */
 
 :root { --bg:#08090c; --grid:#11161c; --grid-major:#1a212a; --panel:#0e1217; --raised:#141a21; --line:#26303b; --ink:#e9edf1; --muted:#8893a1; --dim:#78838f; --amber:#f2b705; --pass:#39d98a; --trace:#3a4654; --fault:#ff5a47; --edge:#5b6775; --col:1180px; --display:"Archivo","Arial Narrow",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace; color-scheme:dark; }
-.site-bar { position:sticky; top:0; z-index:40; display:flex; flex-wrap:wrap; align-items:center; gap:6px 14px; min-height:52px; padding:8px max(16px,calc((100% - var(--col))/2 + 16px)); background:var(--bg); border-bottom:1px solid var(--line); }
-.site-mark { font:800 17px/1 var(--display); font-stretch:125%; letter-spacing:.02em; display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); padding-block:6px; }
-.site-mark i { width:10px; height:10px; background:var(--amber); clip-path:polygon(0 0,100% 0,100% 100%); }
-.site-crumb { font:500 11px/1.5 var(--mono); color:var(--muted); }
+.site-bar { position: sticky; top: 0; z-index: 40; }
+.site-bar .blurxy-page-frame { --blurxy-page-width: var(--col); }
 :focus-visible { outline:2px solid var(--amber); outline-offset:2px; }
 input,select,textarea { accent-color:var(--amber); }
 button { font-family:var(--mono); }
@@ -173,13 +169,21 @@ input::placeholder,textarea::placeholder { color:var(--muted); opacity:1; }
 
 </head>
 <body>
-<header class="site-bar"><a class="site-mark" href="/" aria-label="blurxy home"><i aria-hidden="true"></i>blurxy</a><span class="site-crumb">board / osint field kit</span></header>
+<header class="site-bar blurxy-page-bar">
+  <nav class="blurxy-page-frame" aria-label="Portfolio">
+    <div class="blurxy-trail">
+      <a class="blurxy-wordmark" href="/" aria-label="blurxy home">blurxy</a>
+      <span class="blurxy-location" aria-current="page">OSINT Field Kit</span>
+    </div>
+  </nav>
+</header>
 <main class="wrap booting">
 <script>document.addEventListener("DOMContentLoaded", () => document.querySelector("main.booting")?.classList.remove("booting"))</script>
   <header class="top">
     <div style="display:grid;gap:6px">
       <span class="label">CST 4816 · Intelligence gathering</span>
       <h1>OSINT Field Kit</h1>
+      <a class="blurxy-project-notes" href="/#osint">Project notes</a>
     </div>
     <div class="stats" id="stats"><span><b>2,141</b> tools</span><span><b>1,813</b> answered the link check</span><span><b>115</b> in both lists</span><span><b>17</b> tagged ACTIVE</span></div>
   </header>
